@@ -20,6 +20,6 @@ RUN echo \
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends docker-ce docker-ce-cli containerd.io docker-compose
 
-RUN rustup component add clippy rustfmt
+RUN cd /usr/local && curl -L https://dl.dagger.io/dagger/install.sh | DAGGER_VERSION=0.2.25 sh
 
 EXPOSE 3000

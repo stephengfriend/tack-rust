@@ -15,7 +15,8 @@
                 ],
                 "filter": {
                     "kind": "bin"
-                }
+                },
+                "problemMatcher": "$rustc"
             },
             "args": []
         }

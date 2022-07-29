@@ -1,8 +1,14 @@
 [package]
-name = "hello_remote_world"
+name = "tack"
 version = "0.1.0"
-authors = ["VS Code <vscode@microsoft.com>"]
+authors = ["Stephen G. Friend <hello@stephengfriend.com>"]
+edition = "2021"
 
-[lib]
-path ="./src/lib/lib.rs"
-
+[dependencies]
+chrono = "0.4.19"
+clap = { version = "3.2.15", features = ["derive"] }
+crossterm = "0.24.0"
+eyre = "0.6.8"
+reqwest = { version = "0.11", default-features = false, features = ["cookies", "json", "rustls-tls"] }
+tokio = { version = "1", features = ["full"] }
+tui = { version = "0.18", default-features = false, features = ['crossterm'] }
